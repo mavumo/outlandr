@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outlandr - Make the World Your New Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Landing Page -->
+    <div id="landing-page">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <h2>🌍 Outlandr</h2>
+                    </div>
+                    <nav class="nav">
+                        <a href="#how-it-works">How It Works</a>
+                        <a href="#countries">Countries</a>
+                        <a href="#testimonials">Success Stories</a>
+                        <a href="#contact">Contact</a>
+                    </nav>
+                    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark/light mode">
+                        <span class="theme-icon">🌙</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">Your Next Adventure Starts Here</h1>
+                        <p class="hero-subtitle">Turn your emigration dreams into reality with Outlandr's expert pre-qualification assessment. Discover your perfect destination and start your journey with confidence.</p>
+                        <div class="hero-stats">
+                            <div class="stat">
+                                <span class="stat-number">7</span>
+                                <span class="stat-label">Dream Destinations</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">2,847</span>
+                                <span class="stat-label">Adventurers Guided</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">87%</span>
+                                <span class="stat-label">Success Rate</span>
+                            </div>
+                        </div>
+                        <button class="btn btn--primary btn--lg hero-cta" onclick="startAssessment()">
+                            Start Your Journey Now →
+                        </button>
+                        <p class="hero-guarantee">✓ Expert guidance from qualified immigration specialists</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Value Proposition -->
+        <section class="value-prop">
+            <div class="container">
+                <h2 class="section-title">Why Choose Outlandr for Your Adventure?</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">🎯</div>
+                        <h3>Expert Path Finding</h3>
+                        <p>Our immigration specialists map out your perfect route to your dream destination with precision and care.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">🧭</div>
+                        <h3>Your Trusted Guide</h3>
+                        <p>Like having a knowledgeable friend by your side - we make complex immigration simple and achievable.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">🗺️</div>
+                        <h3>7 Amazing Destinations</h3>
+                        <p>From the USA to Australia, we've got the inside scoop on the world's most desirable places to call home.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">💎</div>
+                        <h3>Incredible Value</h3>
+                        <p>Professional assessment for just R499 - because your dreams shouldn't break the bank.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Countries Section -->
+        <section id="countries" class="countries">
+            <div class="container">
+                <h2 class="section-title">Ready to Trade Braais for Barbecues?</h2>
+                <p class="section-subtitle">Choose your next chapter from these incredible destinations</p>
+                <div class="countries-grid" id="countries-grid">
+                    <!-- Countries will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section id="how-it-works" class="how-it-works">
+            <div class="container">
+                <h2 class="section-title">Your Journey in 3 Simple Steps</h2>
+                <div class="steps-container">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Discover Your Path</h3>
+                            <p>Complete our smart assessment that adapts to your chosen destination and reveals your emigration potential.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Unlock Expert Insights</h3>
+                            <p>Invest R499 to activate your personalized roadmap crafted by our immigration specialists.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Begin Your Adventure</h3>
+                            <p>Receive your detailed action plan and take confident steps toward your new life abroad.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <h2 class="section-title">Adventures Already Begun</h2>
+                <div class="testimonials-grid" id="testimonials-grid">
+                    <!-- Testimonials will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="final-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Your Adventure Awaits</h2>
+                    <p>Join thousands of South Africans who've made the world their new home with Outlandr's expert guidance.</p>
+                    <button class="btn btn--primary btn--lg" onclick="startAssessment()">
+                        Begin Your Journey Today
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="contact" class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h4>Outlandr</h4>
+                        <p>Your trusted companion for making the world your new home.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#how-it-works">How It Works</a></li>
+                            <li><a href="#countries">Countries</a></li>
+                            <li><a href="#testimonials">Success Stories</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Get In Touch</h4>
+                        <p>📧 hello@outlandr.co.za</p>
+                        <p>📞 +27 11 456 7890</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Outlandr. All rights reserved. | Making the world your new home.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Assessment Form -->
+    <div id="assessment-form" class="assessment-form hidden">
+        <div class="form-container">
+            <div class="form-header">
+                <button class="back-to-home" onclick="showLandingPage()">← Back to Home</button>
+                <h2>Your Emigration Adventure Assessment</h2>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <span class="progress-text" id="progress-text">Step 1 of 10</span>
+            </div>
+
+            <div class="form-content">
+                <!-- Step 1: Contact Information -->
+                <div class="step-content" id="step-1">
+                    <h3>Let's Get Acquainted</h3>
+                    <p>First things first - tell us a bit about yourself so we can personalize your journey</p>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="email">Email Address *</label>
+                        <input type="email" id="email" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="province">Current Province *</label>
+                        <select id="province" class="form-control" required>
+                            <option value="">Where are you currently based?</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Step 2: Country Selection -->
+                <div class="step-content hidden" id="step-2">
+                    <h3>Pick Your Dream Destination</h3>
+                    <p>Where does your heart want to call home? Choose the country that excites you most!</p>
+                    
+                    <div class="country-options" id="country-options">
+                        <!-- Country options will be populated by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Step 3: Demographics -->
+                <div class="step-content hidden" id="step-3">
+                    <h3>About You & Your Crew</h3>
+                    <p>Help us understand who's joining this adventure with you</p>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="age">Age *</label>
+                        <input type="number" id="age" class="form-control" min="18" max="80" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="maritalStatus">Relationship Status *</label>
+                        <select id="maritalStatus" class="form-control" required>
+                            <option value="">Select your status</option>
+                            <option value="single">Single & Ready to Mingle</option>
+                            <option value="married">Happily Married</option>
+                            <option value="divorced">Divorced</option>
+                            <option value="widowed">Widowed</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="dependents">Little Adventurers (Dependents/Children)</label>
+                        <select id="dependents" class="form-control">
+                            <option value="0">Just me</option>
+                            <option value="1">1 little explorer</option>
+                            <option value="2">2 mini adventurers</option>
+                            <option value="3">3 young travelers</option>
+                            <option value="4+">4+ future citizens</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Step 4: Education -->
+                <div class="step-content hidden" id="step-4">
+                    <h3>Your Brain Power</h3>
+                    <p>Education opens doors worldwide - let's see what keys you're carrying!</p>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="education">Highest Qualification *</label>
+                        <select id="education" class="form-control" required>
+                            <option value="">Select your highest achievement</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="fieldOfStudy">Field of Study</label>
+                        <input type="text" id="fieldOfStudy" class="form-control" placeholder="e.g., Engineering, Medicine, Business, Arts">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="professionalQuals">Professional Superpowers</label>
+                        <textarea id="professionalQuals" class="form-control" rows="3" placeholder="List your professional certifications, licenses, or special qualifications"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Is your qualification globally recognized?</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="qualRecognized" value="yes"> Absolutely!</label>
+                            <label><input type="radio" name="qualRecognized" value="no"> Not quite</label>
+                            <label><input type="radio" name="qualRecognized" value="unsure"> Not sure yet</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 5: Employment -->
+                <div class="step-content hidden" id="step-5">
+                    <h3>Your Professional Journey</h3>
+                    <p>Your work experience is your ticket to new opportunities - let's showcase it!</p>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="employmentStatus">Current Work Situation *</label>
+                        <select id="employmentStatus" class="form-control" required>
+                            <option value="">What's your current status?</option>
+                            <option value="employed">Full-time Employee</option>
+                            <option value="self-employed">Self-employed Boss</option>
+                            <option value="part-time">Part-time Worker</option>
+                            <option value="unemployed">Between Opportunities</option>
+                            <option value="student">Student</option>
+                            <option value="retired">Retired</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="jobTitle">Your Professional Title</label>
+                        <input type="text" id="jobTitle" class="form-control" placeholder="e.g., Software Developer, Nurse, Teacher, Entrepreneur">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="workExperience">Years of Experience in Your Field</label>
+                        <select id="workExperience" class="form-control">
+                            <option value="">Select your experience level</option>
+                            <option value="0-1">Just getting started (0-1 years)</option>
+                            <option value="2-3">Building momentum (2-3 years)</option>
+                            <option value="4-5">Gaining expertise (4-5 years)</option>
+                            <option value="6-10">Seasoned professional (6-10 years)</option>
+                            <option value="10+">Industry veteran (10+ years)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="salary">Annual Income (ZAR)</label>
+                        <select id="salary" class="form-control">
+                            <option value="">Select your income range</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Step 6: Language Skills -->
+                <div class="step-content hidden" id="step-6">
+                    <h3>Your Communication Arsenal</h3>
+                    <p>Languages are bridges to new cultures - let's see what connections you can make!</p>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="englishLevel">English Proficiency Level *</label>
+                        <select id="englishLevel" class="form-control" required>
+                            <option value="">How's your English?</option>
+                            <option value="native">Native Speaker (Born with it!)</option>
+                            <option value="fluent">Fluent (Dream in English)</option>
+                            <option value="intermediate">Intermediate (Getting there)</option>
+                            <option value="basic">Basic (Learning every day)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="otherLanguages">Other Languages You Speak</label>
+                        <input type="text" id="otherLanguages" class="form-control" placeholder="e.g., Afrikaans, French, German, Portuguese">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Have you taken IELTS/TOEFL?</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="languageTest" value="yes"> Yes, I'm certified!</label>
+                            <label><input type="radio" name="languageTest" value="no"> Not yet</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group hidden" id="testScores">
+                        <label class="form-label" for="testScore">Your Test Score</label>
+                        <input type="text" id="testScore" class="form-control" placeholder="e.g., IELTS 7.5, TOEFL 100">
+                    </div>
+                </div>
+
+                <!-- Step 7: Country-Specific Questions -->
+                <div class="step-content hidden" id="step-7">
+                    <h3 id="country-specific-title">Country-Specific Questions</h3>
+                    <div id="country-specific-questions">
+                        <!-- Questions will be populated based on selected country -->
+                    </div>
+                </div>
+
+                <!-- Step 8: Financial Situation -->
+                <div class="step-content hidden" id="step-8">
+                    <h3>Your Financial Adventure Fund</h3>
+                    <p>Money isn't everything, but it sure helps with the journey - let's talk numbers!</p>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="savings">Adventure Fund for Relocation (ZAR)</label>
+                        <select id="savings" class="form-control">
+                            <option value="">Select your range</option>
+                            <option value="under-100k">Under R100,000</option>
+                            <option value="100k-250k">R100,000 - R250,000</option>
+                            <option value="250k-500k">R250,000 - R500,000</option>
+                            <option value="500k-1m">R500,000 - R1,000,000</option>
+                            <option value="over-1m">Over R1,000,000</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Can you support yourself for 6 months without income?</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="canSupport" value="yes"> Absolutely confident</label>
+                            <label><input type="radio" name="canSupport" value="no"> Not quite there yet</label>
+                            <label><input type="radio" name="canSupport" value="maybe"> With some planning</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Do you own property in South Africa?</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="ownProperty" value="yes"> Yes, I'm invested</label>
+                            <label><input type="radio" name="ownProperty" value="no"> No property yet</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 9: Additional Information -->
+                <div class="step-content hidden" id="step-9">
+                    <h3>The Final Details</h3>
+                    <p>Last but not least - let's complete your adventure profile!</p>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="timeline">When Are You Planning to Leave?</label>
+                        <select id="timeline" class="form-control">
+                            <option value="">Select your timeline</option>
+                            <option value="0-6">ASAP! (0-6 months)</option>
+                            <option value="6-12">Soon (6-12 months)</option>
+                            <option value="1-2">Planning ahead (1-2 years)</option>
+                            <option value="2+">Long-term dream (2+ years)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="motivation">What's Driving Your Adventure?</label>
+                        <select id="motivation" class="form-control">
+                            <option value="">What's your main motivation?</option>
+                            <option value="career">Career Growth</option>
+                            <option value="safety">Safety & Security</option>
+                            <option value="education">Better Education</option>
+                            <option value="family">Family Reunification</option>
+                            <option value="lifestyle">Lifestyle Upgrade</option>
+                            <option value="other">Other Adventure</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Have you tried emigrating before?</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="previousApplication" value="yes"> Yes, I've tried before</label>
+                            <label><input type="radio" name="previousApplication" value="no"> First time adventurer</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Any legal concerns we should know about?</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="criminalRecord" value="yes"> Yes, let's discuss</label>
+                            <label><input type="radio" name="criminalRecord" value="no"> Clean record</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 10: Review & Payment -->
+                <div class="step-content hidden" id="step-10">
+                    <h3>Ready to Unlock Your Adventure?</h3>
+                    <p>Review your information and complete your R499 assessment to get your personalized roadmap</p>
+                    
+                    <div class="review-summary" id="review-summary">
+                        <!-- Summary will be populated by JavaScript -->
+                    </div>
+                    
+                    <div class="qualification-indicator">
+                        <h4>Your Adventure Readiness Level</h4>
+                        <div class="indicator" id="qualification-indicator">
+                            <!-- Qualification indicator will be updated by JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <div class="payment-section">
+                        <h4>Unlock Your Personalized Roadmap - R499</h4>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="cardNumber">Card Number *</label>
+                            <input type="text" id="cardNumber" class="form-control" placeholder="1234 5678 9012 3456" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="expiryDate">Expiry Date *</label>
+                                <input type="text" id="expiryDate" class="form-control" placeholder="MM/YY" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="cvv">CVV *</label>
+                                <input type="text" id="cvv" class="form-control" placeholder="123" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="cardName">Name on Card *</label>
+                            <input type="text" id="cardName" class="form-control" required>
+                        </div>
+                        
+                        <div class="order-summary">
+                            <div class="summary-row">
+                                <span>Expert Assessment</span>
+                                <span>R499.00</span>
+                            </div>
+                            <div class="summary-row total">
+                                <span>Total</span>
+                                <span>R499.00</span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="agreeTerms" required>
+                                <span class="checkmark"></span>
+                                I agree to the <a href="#" target="_blank">Terms and Conditions</a> and <a href="#" target="_blank">Privacy Policy</a>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-footer">
+                <button class="btn btn--outline" id="prevBtn" onclick="previousStep()" style="display: none;">Previous</button>
+                <button class="btn btn--primary" id="nextBtn" onclick="nextStep()">Next Step</button>
+                <button class="btn btn--primary" id="payBtn" onclick="completePayment()" style="display: none;">Complete Payment & Unlock My Adventure</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Page -->
+    <div id="success-page" class="success-page hidden">
+        <div class="container">
+            <div class="success-content">
+                <div class="success-icon">🎉</div>
+                <h1>Welcome to Your Adventure!</h1>
+                <p class="success-subtitle">Payment confirmed! Your personalized emigration roadmap is being prepared.</p>
+                
+                <div class="confirmation-details">
+                    <h3>Adventure Code: <span id="confirmationNumber"></span></h3>
+                    
+                    <div class="next-steps">
+                        <h4>Your Journey Continues...</h4>
+                        <div class="step-item">
+                            <span class="step-num">1</span>
+                            <div>
+                                <strong>Expert Review</strong>
+                                <p>Our immigration specialists are reviewing your profile (3-5 business days)</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <span class="step-num">2</span>
+                            <div>
+                                <strong>Personalized Roadmap</strong>
+                                <p>Receive your detailed assessment with clear action steps for your destination</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <span class="step-num">3</span>
+                            <div>
+                                <strong>Begin Your Adventure</strong>
+                                <p>Follow your customized plan and take confident steps toward your new life</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <h4>Questions About Your Journey?</h4>
+                        <p>📧 hello@outlandr.co.za</p>
+                        <p>📞 +27 11 456 7890</p>
+                    </div>
+                </div>
+                
+                <button class="btn btn--primary" onclick="showLandingPage()">Return to Home</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
