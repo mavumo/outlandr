@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outlandr - Professional Emigration Assistant</title>
+    <link rel="stylesheet" href="https://outlandr.co.za/assistant.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <h1>Outlandr</h1>
+                        <span class="tagline">Professional Emigration Services</span>
+                    </div>
+                    <div class="header-actions">
+                        <button class="btn btn--primary" id="preAssessmentBtn">
+                            Get Pre-Assessment - R1,099
+                        </button>
+                        <button class="btn btn--outline" id="consultationBtn">
+                            Book Consultation
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="container">
+                <div class="app-layout">
+                    <!-- Sidebar -->
+                    <aside class="sidebar">
+                        <!-- API Key Input -->
+                        <div class="card api-setup">
+                            <div class="card__body">
+                                <h4>API Setup</h4>
+                                <div class="form-group">
+                                    <label class="form-label" for="apiKey">Perplexity API Key</label>
+                                    <input type="password" id="apiKey" class="form-control" placeholder="Enter your API key">
+                                    <small class="help-text">Get your API key from <a href="https://www.perplexity.ai/settings/api" target="_blank">Perplexity AI</a></small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Services -->
+                        <div class="card services-card">
+                            <div class="card__body">
+                                <h4>Our Services</h4>
+                                
+                                <div class="service-item">
+                                    <h5>🎯 Pre-Assessment</h5>
+                                    <p class="price">R1,099</p>
+                                    <p>Comprehensive eligibility evaluation with personalized pathway recommendations.</p>
+                                    <button class="btn btn--primary btn--sm service-btn" data-service="preAssessment">
+                                        Get Pre-Assessment
+                                    </button>
+                                </div>
+
+                                <div class="service-item">
+                                    <h5>👨‍💼 Dedicated Specialist</h5>
+                                    <p>Ongoing support from experienced immigration specialists throughout your journey.</p>
+                                    <button class="btn btn--outline btn--sm service-btn" data-service="specialist">
+                                        Learn More
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Countries -->
+                        <div class="card countries-card">
+                            <div class="card__body">
+                                <h4>Target Countries</h4>
+                                <div class="countries-grid">
+                                    <button class="country-btn" data-country="USA">🇺🇸 USA</button>
+                                    <button class="country-btn" data-country="UK">🇬🇧 UK</button>
+                                    <button class="country-btn" data-country="Canada">🇨🇦 Canada</button>
+                                    <button class="country-btn" data-country="Ireland">🇮🇪 Ireland</button>
+                                    <button class="country-btn" data-country="Australia">🇦🇺 Australia</button>
+                                    <button class="country-btn" data-country="Netherlands">🇳🇱 Netherlands</button>
+                                    <button class="country-btn" data-country="New Zealand">🇳🇿 New Zealand</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quick Actions -->
+                        <div class="card quick-actions-card">
+                            <div class="card__body">
+                                <h4>Quick Questions</h4>
+                                <div class="quick-actions">
+                                    <button class="quick-action-btn">What are visa requirements?</button>
+                                    <button class="quick-action-btn">How much does immigration cost?</button>
+                                    <button class="quick-action-btn">Do I need a job offer first?</button>
+                                    <button class="quick-action-btn">Should I get a pre-assessment?</button>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+
+                    <!-- Chat Interface -->
+                    <div class="chat-container">
+                        <div class="chat-header">
+                            <h3>Immigration Assistant</h3>
+                            <div class="chat-actions">
+                                <button class="btn btn--outline btn--sm" id="exportBtn">Export Chat</button>
+                                <button class="btn btn--outline btn--sm" id="clearBtn">Clear History</button>
+                            </div>
+                        </div>
+
+                        <div class="chat-messages" id="chatMessages">
+                            <div class="message bot-message">
+                                <div class="message-content">
+                                    <p>Welcome to Outlandr! 🌍</p>
+                                    <p>I'm here to help you navigate your emigration journey to the USA, UK, Canada, Ireland, Australia, Netherlands, or New Zealand.</p>
+                                    <p><strong>Professional Services Available:</strong></p>
+                                    <ul>
+                                        <li>🎯 <strong>Pre-Assessment (R1,099)</strong> - Comprehensive eligibility evaluation</li>
+                                        <li>👨‍💼 <strong>Dedicated Specialist Support</strong> - Ongoing professional guidance</li>
+                                    </ul>
+                                    <p>Ask me anything about visa requirements, immigration processes, or let me recommend the best pathway for your situation!</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="chat-input-container">
+                            <div class="chat-input-wrapper">
+                                <input type="text" id="chatInput" class="form-control" placeholder="Ask about visa requirements, immigration processes, or country-specific guidance...">
+                                <button class="btn btn--primary" id="sendBtn">Send</button>
+                            </div>
+                            <div class="typing-indicator hidden" id="typingIndicator">
+                                <span>Assistant is typing</span>
+                                <div class="typing-dots">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section">
+            <div class="container">
+                <h2>Success Stories</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"Outlandr's pre-assessment saved me months of research. My specialist guided me through every step of the Express Entry process."</p>
+                        <div class="testimonial-author">
+                            <strong>Sarah M.</strong>
+                            <span>🇨🇦 Successfully immigrated to Canada</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"The dedicated support made all the difference. I got my skilled visa approved on the first try with their help."</p>
+                        <div class="testimonial-author">
+                            <strong>David P.</strong>
+                            <span>🇦🇺 Successfully immigrated to Australia</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"Professional, knowledgeable, and always available. Worth every rand of the assessment fee."</p>
+                        <div class="testimonial-author">
+                            <strong>Lisa R.</strong>
+                            <span>🇬🇧 Successfully immigrated to UK</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-info">
+                        <h4>Outlandr Professional Services</h4>
+                        <p>Your trusted partner for professional emigration guidance and support.</p>
+                    </div>
+                    <div class="footer-actions">
+                        <button class="btn btn--primary" id="footerAssessmentBtn">
+                            Start Pre-Assessment - R1,099
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal hidden" id="serviceModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Service Information</h3>
+                <button class="modal-close" id="modalClose">&times;</button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Dynamic content -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn--outline" id="modalCancel">Close</button>
+                <button class="btn btn--primary" id="modalAction">Get Started</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://outlandr.co.za/assistant.js"></script>
+</body>
+</html>
