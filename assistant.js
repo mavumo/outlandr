@@ -121,7 +121,7 @@ const appData = {
 
 let conversationHistory = [];
 let selectedCountry = null;
-let apiKey = '';
+let apiKey = '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';
 
 const elements = {
   apiKeyInput: document.getElementById('apiKey'),
