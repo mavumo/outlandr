@@ -47,7 +47,7 @@
   };
 
   // App State
-  let apiKey = '';
+  let apiKey = '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';
   let currentCountry = null;
   const conversation = [];
 
