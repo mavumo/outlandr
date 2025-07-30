@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outlandr - Emigration Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="brand">
+                    <span class="brand-icon">🌍</span>
+                    Outlandr
+                </h1>
+                <p class="tagline">Your South African Emigration Assistant</p>
+                <button class="btn btn--sm btn--outline api-key-toggle" id="apiKeyToggle">
+                    Configure API Key
+                </button>
+            </div>
+        </header>
+
+        <!-- API Key Configuration -->
+        <div class="api-config hidden" id="apiConfig">
+            <div class="api-config-content">
+                <label for="apiKey" class="form-label">Perplexity API Key:</label>
+                <div class="api-input-group">
+                    <input type="password" id="apiKey" class="form-control" placeholder="Enter your Perplexity API key">
+                    <button class="btn btn--primary" id="saveApiKey">Save</button>
+                </div>
+                <p class="api-note">Get your API key from <a href="https://perplexity.ai" target="_blank">Perplexity AI</a></p>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-section">
+                    <h3>Countries</h3>
+                    <div class="country-list" id="countryList">
+                        <!-- Countries will be populated by JavaScript -->
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>Quick Actions</h3>
+                    <div class="quick-actions" id="quickActions">
+                        <!-- Quick actions will be populated by JavaScript -->
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Chat Area -->
+            <main class="chat-container">
+                <div class="chat-header">
+                    <h2 id="chatTitle">Emigration Assistant</h2>
+                    <button class="btn btn--sm btn--outline" id="clearChat">Clear Chat</button>
+                </div>
+
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message bot-message">
+                        <div class="message-content">
+                            <div class="message-text">
+                                <p>👋 Hello! I'm your Outlandr emigration assistant. I can help you with information about moving from South Africa to the USA, UK, Canada, Ireland, Australia, Netherlands, or New Zealand.</p>
+                                <p>You can:</p>
+                                <ul>
+                                    <li>Ask me questions about visa requirements, costs, and processes</li>
+                                    <li>Select a country from the sidebar for specific information</li>
+                                    <li>Use the quick action buttons for common questions</li>
+                                </ul>
+                                <p>To get started, please configure your API key or ask me a question about emigration!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="loading-indicator hidden" id="loadingIndicator">
+                    <div class="loading-dot"></div>
+                    <div class="loading-dot"></div>
+                    <div class="loading-dot"></div>
+                    <span>Thinking...</span>
+                </div>
+
+                <div class="chat-input-area">
+                    <div class="chat-input-container">
+                        <input type="text" id="messageInput" class="form-control chat-input" placeholder="Ask me about emigration requirements, costs, processes..." maxlength="500">
+                        <button class="btn btn--primary send-btn" id="sendBtn">
+                            <span class="send-icon">➤</span>
+                        </button>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <!-- Status Bar -->
+        <div class="status-bar" id="statusBar">
+            <span class="status-indicator" id="statusIndicator">
+                <span class="status-dot offline"></span>
+                Ready - Configure API key to start
+            </span>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
